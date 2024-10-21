@@ -138,64 +138,64 @@
           //----------------start 1st row----------------------
 
           displayTable += "<tr><td><div class=\"form-row\"><div class=\"form-group\><label for=\"up_form_no\"><font color=\"red\" size=\"5px\">Form number</font></label>";
-          displayTable += "<input type=\"number\"  id=\"up_form_no"+ row_number +"\" value=\""+r[1]+"\" class=\"form-control\" readonly /> ";
+          displayTable += "<input type=\"number\"  id=\"up_column_1"+ row_number +"\" value=\""+r[1]+"\" class=\"form-control\" readonly /> ";
 
           displayTable += "<input  id=\"up_record_id"+ row_number +"\" value=\""+r[0]+"\" hidden /></div></div></td>";     
 
           // type=\"hidden\"
 
-          displayTable += "<td><div class=\"form-row\"><div class=\"form-group\"><label for=\"up_name\">Name</label> ";
-          displayTable += "<input type=\"text\" id=\"up_name"+ row_number +"\" value=\""+r[2]+"\" class=\"form-control\" readonly /></div></div></td> ";
+          displayTable += "<td><div class=\"form-row\"><div class=\"form-group\"><label for=\"up_column_2\">column_2</label> ";
+          displayTable += "<input type=\"text\" id=\"up_column_2"+ row_number +"\" value=\""+r[2]+"\" class=\"form-control\" readonly /></div></div></td> ";
 
           //relation
 
-          displayTable += "<td><div class=\"form-row\"><div class=\"form-group\"><label for=\"up_relation\">Relation</label> ";          
-          displayTable += "<input type=\"text\" id=\"up_relation"+ row_number +"\" value=\""+r[3]+"\" class=\"form-control\" readonly /></div></div></td> ";  
+          displayTable += "<td><div class=\"form-row\"><div class=\"form-group\"><label for=\"up_column_3\">column_3</label> ";          
+          displayTable += "<input type=\"text\" id=\"up_column_3"+ row_number +"\" value=\""+r[3]+"\" class=\"form-control\" readonly /></div></div></td> ";  
 
           //guardian name          
 
-           displayTable += "<td><div class=\"form-row\"><div class=\"form-group\"><label for=\"up_g_name\">Guardian Name</label> ";          
-          displayTable += "<input type=\"text\" id=\"up_g_name"+ row_number +"\" value=\""+r[4]+"\" class=\"form-control\" readonly /></div></div></td> "; 
+           displayTable += "<td><div class=\"form-row\"><div class=\"form-group\"><label for=\"up_column_4\">column_4</label> ";          
+          displayTable += "<input type=\"text\" id=\"up_column_4"+ row_number +"\" value=\""+r[4]+"\" class=\"form-control\" readonly /></div></div></td> "; 
 
           //age
 
-          displayTable += "<td><div class=\"form-row\"><div class=\"form-group\"><label for=\"up_age\">Age</label> ";          
-          displayTable += "<input type=\"number\" id=\"up_age"+ row_number +"\" value=\""+r[5]+"\" class=\"form-control\" readonly /></div></div></td></tr>"; 
+          displayTable += "<td><div class=\"form-row\"><div class=\"form-group\"><label for=\"up_column_5\">column_5</label> ";          
+          displayTable += "<input type=\"number\" id=\"up_column_5"+ row_number +"\" value=\""+r[5]+"\" class=\"form-control\" readonly /></div></div></td></tr>"; 
 
           //-----------------------end 1st row here------------------
 
         //address ---------------------------(start 2nd row)---------------------------
 
-          displayTable += "<tr><td><div class=\"form-row\"><div class=\"form-group\"><label for=\"up_address\">Address</label>";          
-          displayTable += "<input type=\"text\" id=\"up_address"+ row_number +"\" value=\""+r[6]+"\" class=\"form-control\" readonly /></div></div></td></tr>";
+          displayTable += "<tr><td><div class=\"form-row\"><div class=\"form-group\"><label for=\"up_column_6\">column_6</label>";          
+          displayTable += "<input type=\"text\" id=\"up_column_6"+ row_number +"\" value=\""+r[6]+"\" class=\"form-control\" readonly /></div></div></td></tr>";
 
           //----------------------------end 2nd row here------------------------
 
 
         //tehsil ------------------------(start 3rd row)---------------------
 
-          displayTable += "<tr><td><div class=\"form-row\"><div class=\"form-group \"><label for=\"up_tehsil\">Tehsil</label> ";          
-          displayTable += "<input type=\"text\" id=\"up_tehsil"+ row_number +"\" value=\""+r[7]+"\" class=\"form-control\" readonly /></div></div></td> "; 
+          displayTable += "<tr><td><div class=\"form-row\"><div class=\"form-group \"><label for=\"up_column_7\">column_7</label> ";          
+          displayTable += "<input type=\"text\" id=\"up_column_7"+ row_number +"\" value=\""+r[7]+"\" class=\"form-control\" readonly /></div></div></td> "; 
 
         //district
 
-          displayTable += "<td><div class=\"form-row\"><div class=\"form-group \"><label for=\"up_distt_name\">District</label> ";          
-          displayTable += "<input type=\"text\" id=\"up_distt_name"+ row_number +"\" value=\""+r[8]+"\" class=\"form-control\" readonly /></div></div></td> "; 
+          displayTable += "<td><div class=\"form-row\"><div class=\"form-group \"><label for=\"up_column_8\">column_8</label> ";          
+          displayTable += "<input type=\"text\" id=\"up_column_8"+ row_number +"\" value=\""+r[8]+"\" class=\"form-control\" readonly /></div></div></td> "; 
 
           //state
 
-          displayTable += "<td><div class=\"form-row\"><div class=\"form-group \"><label for=\"up_state\">State</label> ";          
-          displayTable += "<input type=\"text\" id=\"up_state"+ row_number +"\" value=\""+r[9]+"\" class=\"form-control\" readonly /></div></div></td> "; 
+          displayTable += "<td><div class=\"form-row\"><div class=\"form-group \"><label for=\"up_column_9\">column_9</label> ";          
+          displayTable += "<input type=\"text\" id=\"up_column_9"+ row_number +"\" value=\""+r[9]+"\" class=\"form-control\" readonly /></div></div></td> "; 
 
           //pincode
 
-          displayTable += "<td><div class=\"form-row\"><div class=\"form-group \"><label for=\"up_pin\">Pincode</label> ";          
-          displayTable += "<input type=\"number\" id=\"up_pin"+ row_number +"\" value=\""+r[10]+"\" class=\"form-control\" readonly /></div></div></td> "; 
+          displayTable += "<td><div class=\"form-row\"><div class=\"form-group \"><label for=\"up_column_10\">column_10</label> ";          
+          displayTable += "<input type=\"number\" id=\"up_column_10"+ row_number +"\" value=\""+r[10]+"\" class=\"form-control\" readonly /></div></div></td> "; 
 
           //country
 
-          displayTable += "<td><div class=\"form-row\"><div class=\"form-group \"><label for=\"up_country\">Country</label> ";          
-          displayTable += "<input type=\"text\" id=\"up_country"+ row_number +"\" value=\""+r[11]+"\" class=\"form-control\" readonly /></div></div></td> </tr>";
+          displayTable += "<td><div class=\"form-row\"><div class=\"form-group \"><label for=\"up_column_11\">column_11</label> ";          
+          displayTable += "<input type=\"text\" id=\"up_column_11"+ row_number +"\" value=\""+r[11]+"\" class=\"form-control\" readonly /></div></div></td> </tr>";
 
           //---------------------end 3rd row here--------------------------
 
@@ -203,18 +203,18 @@
           //phone number -----------(start 4th row)--------------
 
 
-          displayTable += "<tr><td><div class=\"form-row\"><div class=\"form-group\"><label for=\"up_ph_no\">Phone Number</label> ";          
-          displayTable += "<input type=\"tel\" id=\"up_ph_no"+ row_number +"\" value=\""+r[12]+"\" class=\"form-control\" readonly /></div></div></td> ";
+          displayTable += "<tr><td><div class=\"form-row\"><div class=\"form-group\"><label for=\"up_column_12\">column_12</label> ";          
+          displayTable += "<input type=\"tel\" id=\"up_column_12"+ row_number +"\" value=\""+r[12]+"\" class=\"form-control\" readonly /></div></div></td> ";
 
           //alternate number
 
-          displayTable += "<td><div class=\"form-row\"><div class=\"form-group \"><label for=\"up_alt_no\">Alternate Number</label> ";          
-          displayTable += "<input type=\"tel\" id=\"up_alt_no"+ row_number +"\" value=\""+r[13]+"\" class=\"form-control\" /></div></div></td> ";
+          displayTable += "<td><div class=\"form-row\"><div class=\"form-group \"><label for=\"up_column_13\">column_13</label> ";          
+          displayTable += "<input type=\"tel\" id=\"up_column_13"+ row_number +"\" value=\""+r[13]+"\" class=\"form-control\" /></div></div></td> ";
 
           //pratham upadesh date
 
-          displayTable += "<td><div class=\"form-row\"><div class=\"form-group\"><label for=\"up_pratham_upadesh\">Pratham Upadesh Date</label> ";          
-          displayTable += "<input type=\"date\" id=\"up_pratham_upadesh"+ row_number + "\" placeholder=\"dd/mm/yyyy"+ row_number +"\" value=\""+r[14]+"\" class=\"form-control\" readonly /></div></div></td> ";
+          displayTable += "<td><div class=\"form-row\"><div class=\"form-group\"><label for=\"up_column_14\">column_14</label> ";          
+          displayTable += "<input type=\"date\" id=\"up_column_14"+ row_number + "\" placeholder=\"dd/mm/yyyy"+ row_number +"\" value=\""+r[14]+"\" class=\"form-control\" readonly /></div></div></td> ";
 
           //punar upadesh date
 
