@@ -1,0 +1,140 @@
+//code.gs
+const spreadsheetId   = 'paste link here';//change spreadsheetlink
+const ss = SpreadsheetApp.openById(spreadsheetId);
+
+const dataSheet = ss.getSheetByName("sheet name here");//change sheet name
+// const dataSheet = ss.getSheetByName("test");
+
+function doGet(e) {
+  // console.log("doGet12")  
+  var tmp = HtmlService.createTemplateFromFile("index");
+  return tmp.evaluate()
+   .setTitle("WebSoft Only Update NE")
+    .addMetaTag('viewport', 'width=device-width, initial-scale=1')
+    .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+  
+}
+
+
+// Not used anywhere
+function uniqueId() {
+    // console.log("uniqueId")  
+  var uuid_array = [];  
+  // var dataSheet = ss.getSheetByName("asm_data");
+  // var dataSheet = ss.getSheetByName("s");
+  var getLastRow = dataSheet.getLastRow();
+  if(getLastRow > 1) {
+    var uuid_values = dataSheet.getRange(2, 1, getLastRow - 1, 1).getValues(); 
+    for(i = 0; i < uuid_values.length; i++){
+      uuid_array.push(uuid_values[i][0]);
+    }
+    var x_count = 0;
+    do {
+    var y = 'false';
+    var uuid_value = Utilities.getUuid(); 
+
+    if(uuid_array.indexOf(uuid_value) == -1.0){
+      y = 'true';
+      //Logger.log(uuid_value);
+      return uuid_value;   
+    } 
+    x_count++;
+    } while (y == 'false' && x_count < 17);
+  } else {
+    return Utilities.getUuid();
+  }
+}
+
+function updateRecord(record_id, dataInfo) {  
+    // console.log("updateRecord")  
+  // var dataSheet = ss.getSheetByName("asm_data"); 
+  // var dataSheet = ss.getSheetByName("s"); 
+
+  var getLastRow = dataSheet.getLastRow();
+  var table_values = dataSheet.getRange(2, 1, getLastRow - 1,17).getValues();
+  for(i = 0; i < table_values.length; i++){
+    if(table_values[i][0] == record_id){
+      dataSheet.getRange(i+2, 2).setValue(dataInfo.column_1);
+      dataSheet.getRange(i+2, 3).setValue(dataInfo.column_2);
+      dataSheet.getRange(i+2, 4).setValue(dataInfo.column_3); 
+      dataSheet.getRange(i+2, 5).setValue(dataInfo.column_4);
+      dataSheet.getRange(i+2, 6).setValue(dataInfo.column_5);
+      dataSheet.getRange(i+2, 7).setValue(dataInfo.column_6);
+      dataSheet.getRange(i+2, 8).setValue(dataInfo.column_7);
+      dataSheet.getRange(i+2, 9).setValue(dataInfo.column_8);
+      dataSheet.getRange(i+2, 10).setValue(dataInfo.column_9);
+      dataSheet.getRange(i+2, 11).setValue(dataInfo.column_10);
+      dataSheet.getRange(i+2, 12).setValue(dataInfo.column_11);
+      dataSheet.getRange(i+2, 13).setValue(dataInfo.column_12);
+      dataSheet.getRange(i+2, 14).setValue(dataInfo.column_13);
+      dataSheet.getRange(i+2, 15).setValue(dataInfo.column_14);
+      dataSheet.getRange(i+2, 16).setValue(dataInfo.column_15);
+      dataSheet.getRange(i+2, 17).setValue(dataInfo.column_16);
+      dataSheet.getRange(i+2, 18).setValue(dataInfo.column_17);
+      dataSheet.getRange(i+2, 19).setValue(dataInfo.column_18);
+      // dataSheet.getRange(i+2, 17).setValue(new Date());
+    }
+    
+  }
+  return 'SUCCESS';
+}
+
+/*function deleteRecord(record_id){
+  // console.log("record_id", record_id)
+    // console.log("deleteRecord")  
+  // var dataSheet = ss.getSheetByName("asm_data"); 
+  // var dataSheet = ss.getSheetByName("s"); 
+
+  var getLastRow = dataSheet.getLastRow();
+  // console.log("getLastRow", getLastRow)
+  var getLastcol = dataSheet.getLastColumn();
+  // console.log("getLastcol = ", getLastcol ) 
+  var table_values = dataSheet.getRange(2, 1, getLastRow - 1,getLastcol).getValues();
+  // console.log("table_values", table_values)
+
+// fUNCTION PARAMETERS DEF -------------------------------------------------------------------------
+// dataSheet.getRange(
+//   top row of the range (STARTS FROM 1), 
+//   leftmost column of the range (STARTS FROM 1), 
+//   number of rows in the range,
+//   number of columns in the range).getValues();
+ 
+  for(i = 0; i < table_values.length; i++){
+    if(table_values[i][0] == record_id){
+      // console.log("i", i)
+      // console.log("table_values[i] = ", table_values[i])
+      var rowNumber = i+2;
+      // console.log("rowNumber", rowNumber)
+      dataSheet.deleteRow(rowNumber);
+      dataSheet.d 
+      
+    }   
+  }
+  return 'SUCCESS';
+}*/
+
+
+
+function getDataForSearch() { 
+    // console.log("getDataForSearch")  
+  // const dataSheet = ss.getSheetByName("sheet name here");
+
+  // const dataSheet = ss.getSheetByName("s");
+
+  var getLastRow = dataSheet.getLastRow(); 
+  // console.log("getLastRow = ", getLastRow )
+
+  // var getLastcol = dataSheet.getLastColumn();
+  // console.log("getLastcol = ", getLastcol ) 
+
+  // var table_values =  dataSheet.getRange(2, 1, getLastRow - 1,13).getValues()   // will give null if in any column date is there
+
+  var table_values =  dataSheet.getRange(2, 1, getLastRow - 1,19).getDisplayValues()
+
+  // Logger.log(table_values[0]);
+  //  Logger.log( table_values);
+  // console.log("No of Total records = ", table_values.length);
+  return table_values;
+}
+
+
